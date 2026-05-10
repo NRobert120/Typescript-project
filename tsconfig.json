@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // ── File Layout ───────────────────────────────────────
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // ── ESM / Module Settings ─────────────────────────────
+    "module": "ESNext",
+    "moduleResolution": "Bundler",  // ✅ Modern TS5+ — allows extensionless imports
+    "target": "ES2022",
+
+    // ── Emit Options ──────────────────────────────────────
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false,
+
+    // ── Strict Type Checking ──────────────────────────────
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,   // ✅ Works fine with Bundler + ESNext
+
+    // ── Code Style Checks ─────────────────────────────────
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    // ── Module Safety ─────────────────────────────────────
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
